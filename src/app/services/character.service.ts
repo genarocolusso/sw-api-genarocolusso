@@ -5,24 +5,22 @@ import { Observable, Subject, pipe } from 'rxjs';
 // operators all come from `rxjs/operators`
 import { map, takeUntil, tap } from 'rxjs/operators';
 
-
-import { environment } from '../../environments/environment';
-const apiUrl = environment.apiUrl;
-
+ 
+ 
 @Injectable()
-export class getmoviesService {
+export class characterService {
 
     constructor(private http: Http) { }
 
-    getMovie(): Observable<any[]> {
+    getCharacter(apicharacter): Observable<any[]> {
 
 
         return this.http
-            .get(apiUrl + '/films/')
+            .get(apicharacter)
             .pipe(map((response: Response) => {
-                // let data = (response.json().results.filter(data => data.director === "George Lucas"))
-                let data = (response.json().results)
-                 
+             
+                let data = (response.json())
+                console.log(data)
                 return data;
             })
             )

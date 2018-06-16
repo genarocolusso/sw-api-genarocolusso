@@ -1,0 +1,46 @@
+<section class="midstarwars" *ngIf="movies" >
+
+        <div class="card-sw" [style.background-image]="setbbimg(movies[nextmovie]['episode_id'])"  >
+            <div class="card-head">
+                <h3> SWFLIX </h3>
+                <div class="lateralbutton">
+                    <a href="https://www.instagram.com/starwars/" target="_blank" ><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.starwars.com/" target="_blank" ><i class="fab fa-jedi-order"></i> </a>
+                    <i class="fab fas fa-arrow-alt-circle-right an_arrow" (click)="nextMovie()"></i>
+                </div>
+            </div>
+            <div class="card-infos">
+                <div class="title">
+                    <h1 > {{movies[nextmovie]['title']}}
+                    </h1>
+                    <div class="score">
+                    <div class="icon">
+                        <i class="fab fa-jedi-order"></i>
+                    </div>
+                    <h3 class="realscore">{{setPersonalScore(movies[nextmovie]['episode_id']) }}<span>/10</span></h3>
+                </div>
+                </div>
+    
+                <div class="movie-description">
+                    {{movies[nextmovie]['opening_crawl']}}
+    
+                </div>
+                <p>
+                    <b> Director:  {{movies[nextmovie]['director']}}</b>
+                </p>
+                <p>
+                    <b> Producer: {{movies[nextmovie]['producer']}}</b>
+                </p>
+                <p>
+                    <b> Release Date: {{movies[nextmovie]['release_date'] | date}}</b>
+                </p>
+    
+                <div class="button watch-netflix">Watch on SWFLIX</div>
+            </div>
+            <div class="bottomshadow"></div>
+        </div> 
+    
+    </section>
+
+
+    <people *ngIf="movies"  [recebePeople]="movies[nextmovie]['characters']"></people>
