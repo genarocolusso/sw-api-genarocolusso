@@ -20,7 +20,7 @@ export class characterService {
             .pipe(map((response: Response) => {
              
                 let data = (response.json())
-                console.log(data)
+                
                 return data;
             })
             )

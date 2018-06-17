@@ -34,13 +34,14 @@
                 <p>
                     <b> Release Date: {{movies[nextmovie]['release_date'] | date}}</b>
                 </p>
-    
+                <people *ngIf="movies.length>1"  [movieEdition]="movies[nextmovie]['characters'] "></people>
+                
                 <div class="button watch-netflix">Watch on SWFLIX</div>
             </div>
             <div class="bottomshadow"></div>
         </div> 
     
     </section>
+ 
 
-
-    <people *ngIf="movies.length>1"  [movieEdition]="nextmovie"></people>
+  
