@@ -10,7 +10,7 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browse
 export class movieComponent implements OnInit {
     
     nextmovie =0;
-    movies  ;
+    movies = [] ;
     personalScores = [
       {'episode_id': 1 , 'score' : 6, 'bgimg': 'sw1.jpg'},
       {'episode_id': 2 , 'score' : 6, 'bgimg': 'sw2.jpg'},

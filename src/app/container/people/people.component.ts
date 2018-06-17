@@ -8,17 +8,19 @@ import { characterService } from '../../services/character.service';
 })
 export class peopleComponent implements OnInit {
 
-    @Input() recebePeople;
+    @Input() movieEdition;
 
+    people = [];
     
     constructor(private peopleS : characterService) { }
 
     ngOnInit(): void {
 
-        console.log('recebi uma galera ', this.recebePeople);
-
+         
+            
      }
 
+ 
      getPersonName(personUrl){
 
         this.peopleS.getCharacter(personUrl).subscribe(data=>{

@@ -1,4 +1,4 @@
-<section class="midstarwars" *ngIf="movies" >
+<section class="midstarwars"  *ngIf="movies.length>1" >
 
         <div class="card-sw" [style.background-image]="setbbimg(movies[nextmovie]['episode_id'])"  >
             <div class="card-head">
@@ -43,4 +43,4 @@
     </section>
 
 
-    <people *ngIf="movies"  [recebePeople]="movies[nextmovie]['characters']"></people>
+    <people *ngIf="movies.length>1"  [movieEdition]="nextmovie"></people>

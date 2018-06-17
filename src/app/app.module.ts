@@ -18,9 +18,9 @@ import { getmoviesService } from './services/getmovies.service';
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule 
   ],
   providers: [getmoviesService,characterService ],
-  bootstrap: [AppComponent,movieComponent,peopleComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

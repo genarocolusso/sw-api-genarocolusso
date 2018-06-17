@@ -85,7 +85,11 @@ img.movie-img:hover{
     font-weight: 800;
     margin-top: 20px;
     color: white;
-    cursor: pointer;
+    cursor: pointer; 
+    transition: 0.3s ease-in-out margin-left;
+    &:hover {
+        margin-left: 10px;
+    }
 }
 .bottomshadow {
     background: linear-gradient(0deg, #000,transparent); 
@@ -120,7 +124,8 @@ img.movie-img:hover{
 
 .score .icon i.fab.fa-jedi-order {
     font-size: 24px;
-    color: #8BC34A;
+    color: #8BC34A; 
+    margin-right: 1px;
 }
 .realscore span {
     
