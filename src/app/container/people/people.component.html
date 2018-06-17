@@ -1,10 +1,12 @@
-<section class="people">
+<section class="people" *ngIf="newpeople.length == (looplength)">
 
-   
-    <div  *ngFor="let person of people">
-        {{person}}
-          
+
+    <div *ngFor="let person of newpeople" (mouseenter)="selectPerson(person)">
+        {{person.name}}
+
     </div>
-<br>
+    <br>
 
 </section>
+
+ 

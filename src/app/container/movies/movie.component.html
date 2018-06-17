@@ -34,14 +34,28 @@
                 <p>
                     <b> Release Date: {{movies[nextmovie]['release_date'] | date}}</b>
                 </p>
-                <people *ngIf="movies.length>1"  [movieEdition]="movies[nextmovie]['characters'] "></people>
-                
+                <people *ngIf="movies.length>1"  [moviePeople]="movies[nextmovie]['characters'] " [movieEdition]="nextmovie" (responsePerson)="reciverPerson($event)"></people>
+
                 <div class="button watch-netflix">Watch on SWFLIX</div>
             </div>
             <div class="bottomshadow"></div>
         </div> 
-    
+        <div class="personcard" *ngIf="selectedperson">
+             <div class="name"> {{selectedperson.name}} </div>   
+            <div class="personinfos">
+                <div>
+                <p>Hair color: {{selectedperson.hair_color}} </p>
+                <p>Skin color: {{selectedperson.skin_color}} </p>
+            </div><div>
+                <p>Height: {{selectedperson.height}} </p>
+                <p>Gender: {{selectedperson.gender}} </p>
+                <p>Birth year {{selectedperson.birth_year}} </p>
+            </div>
+            </div>
+            </div>
+     
     </section>
+
  
 
   

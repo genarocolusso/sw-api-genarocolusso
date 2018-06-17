@@ -1,12 +1,11 @@
 section.people{
     
-    display: flex;
-    height: 130px;
-    width: 800px;
+    display: flex; 
+    width: 100%;
     flex-wrap: wrap;
 }
 .people > div {
-    background: #E91E63;
+    background: #F44336;
     border-radius: 3px;
     color: white;
     height: 20px;
@@ -15,4 +14,8 @@ section.people{
     display: flex;
     align-items: center;
     margin-right: 4px;
+    margin-bottom: 8px;
+    cursor: pointer;
 }
+
+

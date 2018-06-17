@@ -1,6 +1,16 @@
 import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 import { getmoviesService } from '../../services/getmovies.service';
 import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
+export class person {
+
+    name: string;
+    hair_color: string;
+    skin_color: string;
+    height: string;
+    gender: string;
+    birth_year: string;
+    homeworld: string
+}
 
 @Component({
     selector: 'movie',
@@ -9,6 +19,7 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browse
 })
 export class movieComponent implements OnInit {
     
+    selectedperson: person;
     nextmovie =0;
     movies = [] ;
     personalScores = [
@@ -49,11 +60,15 @@ export class movieComponent implements OnInit {
   setbbimg(episode_id){
     let response =  this.personalScores.filter( score => score.episode_id === episode_id)
     
-    let image = response[0]['bgimg']
-  
-    return this._sanitizer.bypassSecurityTrustStyle(`url(assets/${image})`);
-  
+    let image = response[0]['bgimg'] 
+    return this._sanitizer.bypassSecurityTrustStyle(`url(assets/${image})`); 
+    //sanitizer to get img url
   
    } 
    
+   reciverPerson(response) {
+    console.log(' evento recebido >> ', response);
+    this.selectedperson = response;
+  }
+
 }

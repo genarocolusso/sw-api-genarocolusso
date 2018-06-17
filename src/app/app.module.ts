@@ -9,6 +9,7 @@ import { peopleComponent } from './container/people/people.component';
 
 import { characterService } from './services/character.service'; 
 import { getmoviesService } from './services/getmovies.service';
+import { planetService } from './services/planets.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { getmoviesService } from './services/getmovies.service';
     BrowserModule,
     HttpModule 
   ],
-  providers: [getmoviesService,characterService ],
+  providers: [getmoviesService, characterService, planetService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

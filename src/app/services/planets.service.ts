@@ -1,26 +1,22 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, Response } from "@angular/http";
-// creation and utility methods
+import { Http, Response } from "@angular/http";
 import { Observable, Subject, pipe } from 'rxjs';
-// operators all come from `rxjs/operators`
 import { map, takeUntil, tap } from 'rxjs/operators';
 
- 
- 
+
+// Idk if I will use it.
 @Injectable()
-export class characterService {
+export class planetService {
 
     constructor(private http: Http) { }
 
-    getCharacter(apicharacter): Observable<any[]> {
+    getPlanetName(api): Observable<string> {
 
 
         return this.http
-            .get(apicharacter)
+            .get(api)
             .pipe(map((response: Response) => {
-             
-                let data = (response.json())
-                
+                let data = (response.json().name)
                 return data;
             })
             )
