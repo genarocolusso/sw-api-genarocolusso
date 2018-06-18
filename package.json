@@ -12,7 +12,8 @@
     "deploy": "git push origin master && git push heroku master"
   },
   "engines": {
-    "node": "10.4.1" 
+    "node": "10.4.1",
+    "npm": "6.1.0" 
   },
   "private": true,
   "dependencies": {
