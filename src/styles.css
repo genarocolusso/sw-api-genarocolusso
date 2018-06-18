@@ -2,3 +2,14 @@ body{
     background: #ddd;    
     font-family: sans-serif;
 }
+
+p.center {
+    text-align: center;
+    font-size: 12px;
+    font-family: cursive;
+    color: black;
+}
+
+.center i.fab.fa-rebel {
+    color: #F44336;
+}
