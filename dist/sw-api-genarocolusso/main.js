@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"social\">\n<h4>\n  <a href=\"https://github.com/genarocolusso\" target=\"_blank\"> https://github.com/genarocolusso/sw-api-genarocolusso </a>\n</h4>\n\n</div>\n\n    <movie></movie>"
+module.exports = "<div class=\"social\">\n<p class=\"center\">\n  Made with <i class=\"fab fa-rebel\"></i> by \n  <a href=\" https://github.com/genarocolusso/sw-api-genarocolusso\" target=\"_blank\"> Genaro Colusso </a>\n</p>\n<p class=\"center\"> check my <a href=\"https://codepen.io/genarocolusso/pens/public/\" target=\"_blank\">codepen</a> </p>\n\n</div>\n\n    <movie></movie>"
 
 /***/ }),
 

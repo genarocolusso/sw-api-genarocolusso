@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "body{\n    background: #ddd;    \n    font-family: sans-serif;\n}"
+module.exports = "body{\n    background: #ddd;    \n    font-family: sans-serif;\n}\n\np.center {\n    text-align: center;\n    font-size: 12px;\n    font-family: cursive;\n    color: black;\n}\n\n.center i.fab.fa-rebel {\n    color: #F44336;\n}"
 
 /***/ }),
 
