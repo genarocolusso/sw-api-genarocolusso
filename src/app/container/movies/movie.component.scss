@@ -176,6 +176,11 @@ h3.realscore {
 /* person card */
 
 .personcard {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
   background-color: rgba(255, 255, 255, 0.56);
   padding: 10px;
   width: 596px;
@@ -198,4 +203,5 @@ h3.realscore {
 .personinfos {
   display: flex;
   justify-content: space-evenly;
+  padding-left: 24px;
 }
